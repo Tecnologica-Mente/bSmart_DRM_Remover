@@ -7,7 +7,7 @@ ITALIAN
 2) Scaricare la versione binaria (.zip) di Node.js LTS a 32-bit o 64-bit (a seconda del sistema operativo installato) dal sito:
 https://nodejs.org/en/download/
 Se non si sa quale versione installare, scegliere quella a 32-bit.
-Estrarre l'archivio appena scaricato e spostare tutti i file nella stessa cartella dove si è estratto l'archivio del punto 1 (vedi immagine allegata - tutti i file devono stare nella stessa cartella).
+Estrarre l'archivio appena scaricato e spostare tutti i file nella stessa cartella dove si è estratto l'archivio del punto 1 (vedi immagine allegata "files_position_image.png" - tutti i file devono stare nella stessa cartella).
 3) Fare doppio clic sul file "bSmart_DRM_Remover_AIO.cmd" e premere il tasto 1 sulla tastiera per avviare l'installazione/aggiornamento del programma. Attendere il completamento dell'operazione.
 4) Collegarsi al sito:
 https://www.bsmart.it/
@@ -36,7 +36,7 @@ ENGLISH
 2) Download the binary version (.zip) of Node.js LTS 32-bit or 64-bit (depending on the operating system installed) from the site:
 https://nodejs.org/
 If you don't know which version to install, choose the 32-bit version.
-Extract the archive you just downloaded and move all the files to the same folder where the archive from point 1 was extracted (see attached image - all files must be in the same folder).
+Extract the archive you just downloaded and move all the files to the same folder where the archive from point 1 was extracted (see attached image "files_position_image.png" - all files must be in the same folder).
 3) Double click on the "bSmart_DRM_Remover_AIO.cmd" file and press key 1 on the keyboard to start the program installation / update. Wait for the operation to complete.
 4) Connect to the site:
 https://www.bsmart.it/
