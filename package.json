@@ -1,0 +1,20 @@
+{
+  "name": "bSmart_DRM_Remover",
+  "version": "1.0.0",
+  "description": "DRM Protection Removal and Downloader for PDF in bSmart Platform",
+  "main": "download.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefano",
+  "license": "MIT",
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "md5": "^2.3.0",
+    "msgpack-lite": "^0.1.26",
+    "node-fetch": "^2.6.1",
+    "pdf-lib": "^1.16.0",
+    "prompt-sync": "^4.2.0",
+    "sanitize-filename": "^1.6.3"
+  }
+}
