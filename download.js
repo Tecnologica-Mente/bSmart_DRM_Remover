@@ -45,17 +45,37 @@ async function downloadAndDecryptFile(url) {
 
 // Adapted from: https://linuxhint.com/read-local-text-file-javascript/
 function showSelectedFile(){
-   fs.readFile("bSmartCookieFile.txt", (err, data) => {
-      if (err) throw err;
+    var r = fs.readFileSync("bSmartCookieFile.txt");
+    return r.slice(0,r.length-2).toString();
+    /*
+    fs.readFile("bSmartCookieFile.txt", (err, data) => {
+        if (err) throw err;
 
-      console.log(data.slice(0, -1).toString());  // slice(0, -1) remove the last character of a string but does not modify the original string (data)
-   });
+        console.log(data.slice(0, -1).toString());  // slice(0, -1) remove the last character of a string but does not modify the original string (data)
+    });
+    */
 }
 
 (async () => {
 
-    let user = await fetch("https://www.bsmart.it/api/v5/user", {headers: {cookie:'_bsw_session_v1_production='+prompt('Input "_bsw_session_v1_production" cookie:')}});
-    //let user = await fetch("https://www.bsmart.it/api/v5/user", {headers: {cookie:'_bsw_session_v1_production='+showSelectedFile()}});
+    //let user = await fetch("https://www.bsmart.it/api/v5/user", {headers: {cookie:'_bsw_session_v1_production='+prompt('Input "_bsw_session_v1_production" cookie:')}});
+    // Adapted from: https://sebhastian.com/node-check-if-file-exists/
+    const path = "bSmartCookieFile.txt";
+    // See if the file "bSmartCookieFile.txt" exists
+    /*
+    if (fs.existsSync(path)){
+        //Do nothing and continue with the next instruction after the if statement (if I put the "let user" statement here it doesn't work)
+    }else{
+        console.log("Cannot find the bSmartCookieFile.txt file. Operation aborted");
+        return;
+    }
+    */
+    if (!fs.existsSync(path)){
+        console.log("Cannot find the bSmartCookieFile.txt file. Operation aborted");
+        return;
+    }
+
+    let user = await fetch("https://www.bsmart.it/api/v5/user", {headers: {cookie:'_bsw_session_v1_production='+showSelectedFile()}});
 
     if (user.status != 200) {
         console.log("Bad cookie");
@@ -89,6 +109,11 @@ function showSelectedFile(){
         }
 
         book = await book.json();
+
+        if (fs.existsSync(book.id + " - " + book.title + ".pdf")){
+            console.log("File already exists");
+            return;
+        }
 
         let info = [];
         let page = 1;
