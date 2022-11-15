@@ -28,6 +28,6 @@ const fs = require('fs');
 
     //fs.writeFile(prompt("Input file name:") + ".pdf", await outputPdf.save(), (e)=>{});*/
 
-    console.log("Saving . . .");
+    console.log("Saving PDF... DONE!");
 
 })();
