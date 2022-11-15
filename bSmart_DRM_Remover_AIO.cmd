@@ -23,14 +23,14 @@
 
 cls
 color 07
-title  bSmart DRM Remover AIO v1.0.1
+title  bSmart DRM Remover AIO v1.1.0
 mode 100, 30
 set "bsdrmrtemp=%SystemRoot%\Temp\__BSDRMR"
 if exist "%bsdrmrtemp%\.*" rmdir /s /q "%bsdrmrtemp%\" %nul%
 
 echo:
 echo:
-echo:             Welcome to bSmart DRM Remover AIO v1.0.1
+echo:             Welcome to bSmart DRM Remover AIO v1.1.0
 echo:
 echo:       ____________________________________________________________________________________
 echo:
