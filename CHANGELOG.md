@@ -1,6 +1,16 @@
 # Change Log
 This is a full list of changes for each release of bSmart_DRM_Remover_AIO.
  
+## [1.1.1] - 2022-11-17
+ 
+### Added
+ 
+### Changed
+ - Code optimization
+ 
+### Fixed
+ 
+----------------------------------------------------------------------------------------
 ## [1.1.0] - 2022-11-15
  
 ### Added
