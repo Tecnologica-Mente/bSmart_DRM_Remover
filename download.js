@@ -211,11 +211,13 @@ function showSelectedFile(){
         // Reactivate the cursor
         process.stdout.write("\x1B[?25h")
 
+        console.log("Saving PDF...");
+
         //fs.writeFile(prompt("Input file name:") + ".pdf", await outputPdf.save(), (e)=>{});
 
         fs.writeFile(sanitize(book.id + " - " + book.title + ".pdf"), await outputPdf.save(), (e)=>{});
 
-        console.log("Saving PDF... DONE!");
+        console.log("DONE!");
 
     } catch(exception) {
         if((bookId>books.length-1) || (bookId<0) || isNaN(bookId)){
