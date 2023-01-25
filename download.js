@@ -145,7 +145,7 @@ function showSelectedFile(){
          });
         
     }
-    let bookId = prompt(`Please input book id${(books.length == 0 ? " manually" : "")}:`);
+    let bookId = prompt(`Please input book id${(books.length == 0 ? " manually" : "")}: `);
 
     try {
         let book = await fetch(`https://www.bsmart.it/api/v6/books/by_book_id/${books[bookId].id}`, {headers});
